@@ -48,6 +48,17 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+.card-container input {
+  width: calc(100% - 80px);
+}
+
+.card-container button {
+  width: 70px;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
 /* Card styling */
 .card {
   width: 90px;
@@ -166,5 +177,16 @@ input {
   }
   input {
     width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container input {
+    width: calc(100% - 80px);
+  }
+  .card-container button {
+    width: 70px; /* stays tappable on mobile */
+    padding: 5px 0;
+    font-size: 0.8rem;
   }
 }
