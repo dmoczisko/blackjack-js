@@ -34,6 +34,10 @@ h1 {
   margin-bottom: 10px;
 }
 
+#dealer-sum-el {
+  font-size: 1rem;
+}
+
 .card-container {
   background: white;
   color: black;
@@ -44,6 +48,7 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Card styling */
 .card {
   width: 90px;
   height: 140px;
@@ -95,20 +100,22 @@ h1 {
 .button-row {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 button {
   color: #016f32;
-  width: 120px;
   background: goldenrod;
-  padding: 8px 0;
+  padding: 10px 0;
   font-weight: bold;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: box-shadow 0.2s, transform 0.2s;
+  flex: 1 1 100px;
+  max-width: 150px;
 }
 
 button:hover {
@@ -116,19 +123,48 @@ button:hover {
   transform: translateY(-2px);
 }
 
-button.ok {
-  margin-top: 10px;
-}
-
 input {
-  padding: 5px;
+  padding: 6px;
   border-radius: 4px;
   border: 1px solid #ccc;
   margin-right: 5px;
+  width: calc(100% - 70px);
 }
 
+/* Flip animation */
 @keyframes flipIn {
   to {
     transform: rotateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  #player-el,
+  #message-el,
+  #dealer-sum-el {
+    font-size: 1rem;
+  }
+  .card {
+    width: 65px;
+    height: 100px;
+    padding: 6px;
+  }
+  .card-center {
+    font-size: 1.6rem;
+  }
+  .card-top-left,
+  .card-bottom-right {
+    font-size: 0.8rem;
+  }
+  button {
+    padding: 8px 0;
+    flex: 1 1 80px;
+    max-width: 120px;
+  }
+  input {
+    width: calc(100% - 60px);
   }
 }
