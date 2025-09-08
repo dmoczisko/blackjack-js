@@ -3,89 +3,132 @@ body {
     sans-serif;
   background-image: url("images/table.png");
   background-size: cover;
-  font-weight: bold;
   color: white;
   text-align: center;
+  padding: 20px;
 }
 
 h1 {
   color: goldenrod;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
+#player-el,
 #message-el {
-  font-style: italic;
-  margin-bottom: 12px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
+#dealer-row,
+#player-row {
+  margin: 15px 0;
+}
+
+#dealer-cards,
 #cards-el {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.card-container {
+  background: white;
+  color: black;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .card {
-  width: 60px;
-  height: 90px;
+  width: 90px;
+  height: 140px;
   background: white;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   color: black;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   transform: rotateY(90deg);
   animation: flipIn 0.4s forwards;
+  font-family: "Segoe UI Symbol", "Arial Unicode MS", "Lucida Sans Unicode",
+    sans-serif;
+  position: relative;
 }
 
-.card-top {
-  font-size: 0.8rem;
-  align-self: flex-start;
+.card.red {
+  color: red;
 }
 
-.card-center {
-  font-size: 1.4rem;
-  text-align: center;
-  flex-grow: 1;
+.card-top-left {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  font-size: 1rem;
 }
 
-.card-bottom {
-  font-size: 0.8rem;
-  align-self: flex-end;
+.card-bottom-right {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  font-size: 1rem;
   transform: rotate(180deg);
 }
 
-/* Red suits */
-.card.red {
-  color: red;
+.card-center {
+  font-size: 2.2rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+button {
+  color: #016f32;
+  width: 120px;
+  background: goldenrod;
+  padding: 8px 0;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+button.ok {
+  margin-top: 10px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
 }
 
 @keyframes flipIn {
   to {
     transform: rotateY(0);
   }
-}
-
-button {
-  color: #016f32;
-  width: 150px;
-  background: goldenrod;
-  padding: 5px 0;
-  font-weight: bold;
-  border: none;
-  border-radius: 2px;
-  margin: 4px;
-}
-button:hover {
-  cursor: pointer;
-  opacity: 0.9;
-}
-
-input {
-  padding: 4px;
-  border-radius: 2px;
-  border: 1px solid #ccc;
 }

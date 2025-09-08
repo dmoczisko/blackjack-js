@@ -1,23 +1,43 @@
 <html>
   <head>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Blackjack</h1>
-    <p>
-      Enter your name:
+
+    <!-- Player Name Input -->
+    <div class="card-container">
+      <label for="player-name-input">Enter your name:</label>
       <input type="text" id="player-name-input" placeholder="Your name" />
-      <button onclick="setPlayerName()">OK</button>
-    </p>
+      <button class="ok" onclick="setPlayerName()">OK</button>
+    </div>
 
-    <p id="message-el">Want to play a round?</p>
-    <div id="cards-el"></div>
-    <p id="sum-el">Sum:</p>
-    <p id="player-el"></p>
+    <p id="player-el">Player: $200</p>
+    <p id="message-el">Enter your name to start!</p>
 
-    <button id="start-btn" onclick="startGame()">START GAME</button>
-    <button onclick="newCard()">NEW CARD</button>
-    <button onclick="resetGame()">RESET</button>
+    <div id="dealer-row">
+      <h3>Dealer</h3>
+      <div id="dealer-cards"></div>
+      <p id="dealer-sum-el">Sum:</p>
+    </div>
+
+    <div id="player-row">
+      <h3>Player</h3>
+      <div id="cards-el"></div>
+      <p id="sum-el">Sum:</p>
+    </div>
+
+    <div class="button-row">
+      <button onclick="startGame()">START GAME</button>
+      <button onclick="hit()">HIT</button>
+      <button onclick="stand()">STAND</button>
+      <button onclick="resetGame()">RESET</button>
+    </div>
 
     <script src="index.js"></script>
   </body>
