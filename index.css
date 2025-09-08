@@ -1,38 +1,91 @@
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #1a564b;
-    font-weight: bold;
-    color: #d2b2a8;
-    text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", Arial,
+    sans-serif;
+  background-image: url("images/table.png");
+  background-size: cover;
+  font-weight: bold;
+  color: white;
+  text-align: center;
 }
 
 h1 {
-    color: #a4a6db;
-    font-size: 3rem;
-    font-weight: bold;
+  color: goldenrod;
 }
 
 #message-el {
-    font-style: italic;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+#cards-el {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.card {
+  width: 60px;
+  height: 90px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transform: rotateY(90deg);
+  animation: flipIn 0.4s forwards;
+}
+
+.card-top {
+  font-size: 0.8rem;
+  align-self: flex-start;
+}
+
+.card-center {
+  font-size: 1.4rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.card-bottom {
+  font-size: 0.8rem;
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+/* Red suits */
+.card.red {
+  color: red;
+}
+
+@keyframes flipIn {
+  to {
+    transform: rotateY(0);
+  }
 }
 
 button {
-    width: 150px;
-    padding: 15px;
-    font-weight: bold;
-    background-color: #FF69B4;
-    color: #000;
-    cursor: pointer;
-    border: none;
-    border-radius: 3px;
-    display: block;
-    margin: 0 auto;
+  color: #016f32;
+  width: 150px;
+  background: goldenrod;
+  padding: 5px 0;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  margin: 4px;
 }
-button:first-of-type {
-    margin-bottom: 10px;
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
 }
 
-button:hover {
-    color: #000;
-    background-color: #FF96CB;
+input {
+  padding: 4px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
 }

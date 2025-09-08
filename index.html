@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Let's Play Blackjack!</title>
-</head>
-<body>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <h1>Blackjack</h1>
-    <p id="greeting-el"></p>
+    <p>
+      Enter your name:
+      <input type="text" id="player-name-input" placeholder="Your name" />
+      <button onclick="setPlayerName()">OK</button>
+    </p>
+
     <p id="message-el">Want to play a round?</p>
-    <p id="cards-el">Cards:</p>
-    <p id="sum-el">Sum: </p>
-    <button onclick="startGame()">Start Game</button>
-    <button onclick="newCard()">New Card</button>
+    <div id="cards-el"></div>
+    <p id="sum-el">Sum:</p>
     <p id="player-el"></p>
+
+    <button id="start-btn" onclick="startGame()">START GAME</button>
+    <button onclick="newCard()">NEW CARD</button>
+    <button onclick="resetGame()">RESET</button>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
