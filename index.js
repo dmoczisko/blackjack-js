@@ -1,4 +1,3 @@
-// ------------------- Game Data -------------------
 let player = { name: "Player", chips: 200 };
 let playerCards = [], dealerCards = [];
 let playerSum = 0, dealerSum = 0;
@@ -18,7 +17,6 @@ const playerEl = document.getElementById("player-el");
 const cardsEl = document.getElementById("cards-el");
 const dealerEl = document.getElementById("dealer-cards");
 
-// ------------------- Player Name -------------------
 function setPlayerName() {
     const input = document.getElementById("player-name-input");
     const name = input.value.trim();
@@ -31,7 +29,6 @@ function setPlayerName() {
     } else alert("Enter a valid name!");
 }
 
-// ------------------- Utility Functions -------------------
 function getRandomCard() {
     const suit = suits[Math.floor(Math.random() * suits.length)];
     const valueObj = values[Math.floor(Math.random() * values.length)];
@@ -46,7 +43,6 @@ function adjustForAces(cards, sum) {
     return sum;
 }
 
-// ------------------- Render Functions -------------------
 function renderCards(cards, container, hideFirst = false) {
     container.innerHTML = "";
     cards.forEach((card, i) => {
@@ -64,7 +60,6 @@ function renderCards(cards, container, hideFirst = false) {
     });
 }
 
-// ------------------- Game Logic -------------------
 function startGame() {
     document.getElementById("dealer-sum-el").textContent = "Sum: ?";
 

@@ -60,7 +60,6 @@ h1 {
   margin-top: 10px;
 }
 
-/* Card styling */
 .card {
   width: 90px;
   height: 140px;
@@ -143,7 +142,6 @@ input {
   width: calc(100% - 70px);
 }
 
-/* Flip animation */
 @keyframes flipIn {
   to {
     transform: rotateY(0);
@@ -186,7 +184,7 @@ input {
     width: calc(100% - 80px);
   }
   .card-container button {
-    width: 70px; /* stays tappable on mobile */
+    width: 70px;
     padding: 5px 0;
     font-size: 0.8rem;
   }
